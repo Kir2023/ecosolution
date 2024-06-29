@@ -23,12 +23,13 @@ export const GlobalStyle = createGlobalStyle`
     --main-color: #97D28B;
     --main-text-color: #173D33;
     --background-color: #EAEDF1;
+    --button-background-color: #DCEFD8;
     --HeadersFont: 'Oswald', sans-serif;
     --ParagraphsFont: 'Fira Sans', sans-serif;
     color-scheme: light dark;
   }
 
-  body{
+  body {
     margin: 0;
     font-family: var(--ParagraphsFont);
     background-color: var(--background-color);
@@ -55,28 +56,26 @@ export const GlobalStyle = createGlobalStyle`
     height: auto;
   }
 
-  a{
+  a {
     text-decoration: none;
+  }
+
+  button {
+    border: none;
   }
 `;
 
 export const Container = styled.div`
   padding: 0 20px;
-  margin: 36px auto;
+  margin-top: 36px;
   width: 100%;
-
-  @media screen and (min-width: 360px) {
-    max-width: 480px;
-  }
 
   @media screen and (min-width: 768px) {
     padding: 0 30px;
-    max-width: 768px;
   }
 
   @media screen and (min-width: 1280px) {
     padding: 0 100px;
-    margin: 24px auto;
-    max-width: 1280px;
+    margin-top: 24px;
   }
 `;

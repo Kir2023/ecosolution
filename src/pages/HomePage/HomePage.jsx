@@ -1,7 +1,12 @@
+import Header from "../../components/Header/Header";
 import { Container } from "../../globalStyles";
 
 const HomePage = () => {
-  return <Container>HomePage</Container>;
+  return (
+    <Container>
+      <Header />
+    </Container>
+  );
 };
 
 export default HomePage;
