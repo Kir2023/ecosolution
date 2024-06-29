@@ -10,6 +10,7 @@ import {
 } from "./Header.styled";
 import sprite from "../../assets/sprite.svg";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,11 +25,11 @@ const Header = () => {
 
   return (
     <HeaderWrapper>
-      <a href="/">
+      <Link to="/">
         <SVGLogo>
           <use href={`${sprite}#icon-logo`} />
         </SVGLogo>
-      </a>
+      </Link>
       <ButtonsWrapper>
         <BurgerButton type="button" onClick={toggleMenu}>
           <SVGBurger>
