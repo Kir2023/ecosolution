@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   BurgerButton,
   ButtonsWrapper,
@@ -8,8 +9,19 @@ import {
   SVGLogo,
 } from "./Header.styled";
 import sprite from "../../assets/sprite.svg";
+import BurgerMenu from "../BurgerMenu/BurgerMenu";
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <HeaderWrapper>
       <a href="/">
@@ -18,7 +30,7 @@ const Header = () => {
         </SVGLogo>
       </a>
       <ButtonsWrapper>
-        <BurgerButton type="button">
+        <BurgerButton type="button" onClick={toggleMenu}>
           <SVGBurger>
             <use href={`${sprite}#icon-burger`} />
           </SVGBurger>
@@ -30,6 +42,7 @@ const Header = () => {
           </SVGArrow>
         </GetInTouchButton>
       </ButtonsWrapper>
+      {isMenuOpen && <BurgerMenu onClose={closeMenu} />}
     </HeaderWrapper>
   );
 };
