@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Overlay = styled.div`
   position: fixed;
@@ -51,8 +51,9 @@ export const CloseButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
-  line-height: 19px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
   letter-spacing: -0.04em;
   background: transparent;
   color: #ffffff;
@@ -77,7 +78,7 @@ export const SVGClose = styled.svg`
 
 export const HorizontalLine = styled.div`
   position: absolute;
-  top: 48px;
+  top: 56px;
   left: 24px;
   right: 24px;
   height: 1px;
@@ -101,24 +102,36 @@ export const NavigationLink = styled.a`
   gap: 8px;
   align-items: center;
   padding: 8px 0;
+  cursor: pointer;
+  text-decoration: none;
 
-  &: hover {
+  ${(props) =>
+    props.$isactive &&
+    css`
+      color: var(--main-color);
+      pointer-events: none;
+    `}
+
+  &:hover {
     color: #ffffff;
-  }
-
-  svg {
-    stroke: rgba(255, 255, 255, 0.25);
-    fill: transparent;
-  }
-
-  &: hover svg {
-    stroke: #ffffff;
   }
 `;
 
 export const SVGNavigationArrow = styled.svg`
   width: 16px;
   height: 16px;
+  stroke: rgba(255, 255, 255, 0.25);
+  fill: transparent;
+
+  ${(props) =>
+    props.$isactive &&
+    css`
+      stroke: var(--main-color);
+    `}
+
+  ${NavigationLink}:hover & {
+    stroke: #ffffff;
+  }
 `;
 
 export const SocialMediaList = styled.ul`

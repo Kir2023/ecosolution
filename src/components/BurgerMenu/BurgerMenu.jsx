@@ -18,7 +18,7 @@ import {
 } from "./BurgerMenu.styled";
 import sprite from "../../assets/sprite.svg";
 
-const BurgerMenu = ({ onClose }) => {
+const BurgerMenu = ({ onClose, mainSectionRef, activeLink, onLinkClick }) => {
   const handleEscKey = useCallback(
     (event) => {
       if (event.keyCode === 27) {
@@ -39,6 +39,14 @@ const BurgerMenu = ({ onClose }) => {
     };
   }, [handleEscKey]);
 
+  const scrollToSection = (sectionRef, linkName) => {
+    if (sectionRef && sectionRef.current) {
+      sectionRef.current.scrollIntoView({ behavior: "smooth" });
+      onLinkClick(linkName);
+      onClose();
+    }
+  };
+
   return (
     <>
       <Overlay onClick={handleOverlayClick} />
@@ -53,41 +61,56 @@ const BurgerMenu = ({ onClose }) => {
         <Navigation>
           <NavigationList>
             <NavigationListItem>
-              <NavigationLink href="#">
+              <NavigationLink
+                onClick={() => scrollToSection(mainSectionRef, "Main")}
+                $isactive={activeLink === "Main"}
+              >
                 Main
-                <SVGNavigationArrow>
+                <SVGNavigationArrow $isactive={activeLink === "Main"}>
                   <use href={`${sprite}#icon-arrow-right`} />
                 </SVGNavigationArrow>
               </NavigationLink>
             </NavigationListItem>
             <NavigationListItem>
-              <NavigationLink href="#">
+              <NavigationLink
+                onClick={() => scrollToSection(mainSectionRef, "About")}
+                $isactive={activeLink === "About"}
+              >
                 About
-                <SVGNavigationArrow>
+                <SVGNavigationArrow $isactive={activeLink === "About"}>
                   <use href={`${sprite}#icon-arrow-right`} />
                 </SVGNavigationArrow>
               </NavigationLink>
             </NavigationListItem>
             <NavigationListItem>
-              <NavigationLink href="#">
+              <NavigationLink
+                onClick={() => scrollToSection(mainSectionRef, "Cases")}
+                $isactive={activeLink === "Cases"}
+              >
                 Cases
-                <SVGNavigationArrow>
+                <SVGNavigationArrow $isactive={activeLink === "Cases"}>
                   <use href={`${sprite}#icon-arrow-right`} />
                 </SVGNavigationArrow>
               </NavigationLink>
             </NavigationListItem>
             <NavigationListItem>
-              <NavigationLink href="#">
+              <NavigationLink
+                onClick={() => scrollToSection(mainSectionRef, "FAQ")}
+                $isactive={activeLink === "FAQ"}
+              >
                 FAQ
-                <SVGNavigationArrow>
+                <SVGNavigationArrow $isactive={activeLink === "FAQ"}>
                   <use href={`${sprite}#icon-arrow-right`} />
                 </SVGNavigationArrow>
               </NavigationLink>
             </NavigationListItem>
             <NavigationListItem>
-              <NavigationLink href="#">
+              <NavigationLink
+                onClick={() => scrollToSection(mainSectionRef, "Contact Us")}
+                $isactive={activeLink === "Contact Us"}
+              >
                 Contact Us
-                <SVGNavigationArrow>
+                <SVGNavigationArrow $isactive={activeLink === "Contact Us"}>
                   <use href={`${sprite}#icon-arrow-right`} />
                 </SVGNavigationArrow>
               </NavigationLink>

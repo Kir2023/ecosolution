@@ -36,7 +36,10 @@ export const GlobalStyle = createGlobalStyle`
     color: var(--main-text-color);
   }
 
-  p,
+  p {
+    margin: 0;
+  }
+
   h1,
   h2,
   h3 {
