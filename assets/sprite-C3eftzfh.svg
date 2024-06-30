@@ -34,4 +34,9 @@
         <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M16 20.667c2.577 0 4.667-2.089 4.667-4.667s-2.089-4.667-4.667-4.667c-2.577 0-4.667 2.089-4.667 4.667s2.089 4.667 4.667 4.667z"></path>
         <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667" d="M23.515 9.333h0.015"></path>
     </symbol>
+    <symbol id="icon-big-arrow-right" viewBox="0 0 31 32">
+        <path fill="#97d28b" style="fill: var(--color1, #97d28b)" d="M15.515 0.485c8.569 0 15.515 6.946 15.515 15.515s-6.946 15.515-15.515 15.515c-8.569 0-15.515-6.946-15.515-15.515s6.946-15.515 15.515-15.515z"></path>
+        <path fill="none" stroke="#173d33" style="stroke: var(--color2, #173d33)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="0.9697" d="M17.086 12.076l3.924 3.924-3.924 3.924"></path>
+        <path fill="none" stroke="#173d33" style="stroke: var(--color2, #173d33)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="0.9697" d="M10.020 16h10.88"></path>
+    </symbol>
 </svg>
