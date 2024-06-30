@@ -22,7 +22,7 @@ export const GlobalStyle = createGlobalStyle`
   :root{
     --main-color: #97D28B;
     --main-text-color: #173D33;
-    --background-color: #EAEDF1;
+    --background-color: #ffffff;
     --button-background-color: #DCEFD8;
     --HeadersFont: 'Oswald', sans-serif;
     --ParagraphsFont: 'Fira Sans', sans-serif;

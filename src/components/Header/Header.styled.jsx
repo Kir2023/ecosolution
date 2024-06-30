@@ -5,11 +5,13 @@ export const HeaderWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   position: fixed;
-  top: 36px;
+  top: 0;
   left: 0;
   right: 0;
+  padding-top: 36px;
   padding-left: 20px;
   padding-right: 20px;
+  background-color: var(--background-color);
 
   @media screen and (min-width: 768px) {
     padding-left: 30px;
@@ -17,7 +19,7 @@ export const HeaderWrapper = styled.div`
   }
 
   @media screen and (min-width: 1280px) {
-    top: 24px;
+    padding-top: 24px;
     padding-left: 100px;
     padding-right: 100px;
   }

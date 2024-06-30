@@ -2,15 +2,19 @@ import { useRef } from "react";
 import Header from "../../components/Header/Header";
 import Main from "../../components/Main/Main";
 import { Container } from "../../globalStyles";
+import About from "../../components/About/About";
 
 const HomePage = () => {
   const mainSectionRef = useRef(null);
 
   return (
-    <Container>
+    <>
       <Header mainSectionRef={mainSectionRef} />
-      <Main ref={mainSectionRef} />
-    </Container>
+      <Container>
+        <Main ref={mainSectionRef} />
+        <About />
+      </Container>
+    </>
   );
 };
 
