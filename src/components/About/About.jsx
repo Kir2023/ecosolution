@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name */
 import {
   AboutHeader,
   AboutText,
@@ -16,10 +17,11 @@ import {
 import sprite from "../../assets/sprite.svg";
 import img1 from "../../assets/images/value-img-1.webp";
 import img2 from "../../assets/images/value-img-2.webp";
+import { forwardRef } from "react";
 
-const About = () => {
+const About = forwardRef((props, ref) => {
   return (
-    <AboutWrapper>
+    <AboutWrapper ref={ref}>
       <AboutTextWrapper>
         <AboutHeader>Main values of our company</AboutHeader>
         <VerticalLine />
@@ -85,6 +87,6 @@ const About = () => {
       </ValuesWrapper>
     </AboutWrapper>
   );
-};
+});
 
 export default About;

@@ -18,7 +18,13 @@ import {
 } from "./BurgerMenu.styled";
 import sprite from "../../assets/sprite.svg";
 
-const BurgerMenu = ({ onClose, mainSectionRef, activeLink, onLinkClick }) => {
+const BurgerMenu = ({
+  onClose,
+  mainSectionRef,
+  aboutSectionRef,
+  activeLink,
+  onLinkClick,
+}) => {
   const handleEscKey = useCallback(
     (event) => {
       if (event.keyCode === 27) {
@@ -41,7 +47,11 @@ const BurgerMenu = ({ onClose, mainSectionRef, activeLink, onLinkClick }) => {
 
   const scrollToSection = (sectionRef, linkName) => {
     if (sectionRef && sectionRef.current) {
-      sectionRef.current.scrollIntoView({ behavior: "smooth" });
+      const offsetTop = sectionRef.current.offsetTop;
+      window.scrollTo({
+        top: offsetTop - 100,
+        behavior: "smooth",
+      });
       onLinkClick(linkName);
       onClose();
     }
@@ -73,7 +83,7 @@ const BurgerMenu = ({ onClose, mainSectionRef, activeLink, onLinkClick }) => {
             </NavigationListItem>
             <NavigationListItem>
               <NavigationLink
-                onClick={() => scrollToSection(mainSectionRef, "About")}
+                onClick={() => scrollToSection(aboutSectionRef, "About")}
                 $isactive={activeLink === "About"}
               >
                 About

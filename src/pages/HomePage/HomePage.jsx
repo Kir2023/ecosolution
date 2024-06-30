@@ -1,20 +1,24 @@
 import { useRef } from "react";
 import Header from "../../components/Header/Header";
 import Main from "../../components/Main/Main";
-import { Container } from "../../globalStyles";
 import About from "../../components/About/About";
+import { Container } from "../../globalStyles";
+import Electricity from "../../components/Electricity/Electricity";
 
 const HomePage = () => {
   const mainSectionRef = useRef(null);
+  const aboutSectionRef = useRef(null);
 
   return (
-    <>
-      <Header mainSectionRef={mainSectionRef} />
-      <Container>
-        <Main ref={mainSectionRef} />
-        <About />
-      </Container>
-    </>
+    <Container>
+      <Header
+        mainSectionRef={mainSectionRef}
+        aboutSectionRef={aboutSectionRef}
+      />
+      <Main ref={mainSectionRef} />
+      <About ref={aboutSectionRef} />
+      <Electricity />
+    </Container>
   );
 };
 
