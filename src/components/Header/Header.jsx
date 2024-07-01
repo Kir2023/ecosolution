@@ -13,7 +13,7 @@ import {
 import sprite from "../../assets/sprite.svg";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
 
-const Header = ({ mainSectionRef, aboutSectionRef }) => {
+const Header = ({ mainSectionRef, aboutSectionRef, casesSectionRef }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("");
 
@@ -59,6 +59,7 @@ const Header = ({ mainSectionRef, aboutSectionRef }) => {
           onClose={closeMenu}
           mainSectionRef={mainSectionRef}
           aboutSectionRef={aboutSectionRef}
+          casesSectionRef={casesSectionRef}
           activeLink={activeLink}
           onLinkClick={handleLinkClick}
         />

@@ -79,4 +79,19 @@
         <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M26.667 22.667h-6.227v6.667h8.893v-4c0-1.467-1.2-2.667-2.667-2.667z"></path>
         <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M16.693 2.76l0.707 1.413c0.093 0.2 0.347 0.387 0.56 0.413l1.28 0.213c0.813 0.133 1.013 0.733 0.427 1.307l-1 1c-0.173 0.173-0.267 0.493-0.213 0.72l0.28 1.227c0.227 0.973-0.293 1.347-1.147 0.84l-1.2-0.707c-0.213-0.133-0.573-0.133-0.787 0l-1.2 0.707c-0.853 0.507-1.373 0.133-1.147-0.84l0.28-1.227c0.053-0.227-0.040-0.56-0.213-0.72l-0.987-0.987c-0.587-0.587-0.4-1.173 0.427-1.307l1.28-0.213c0.213-0.040 0.467-0.227 0.56-0.413l0.707-1.413c0.387-0.773 1-0.773 1.387-0.013z"></path>
     </symbol>
+    <symbol id="icon-arrow-left-slider" viewBox="0 0 32 32">
+        <path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="0.4848" d="M16 0.242c-8.703 0-15.758 7.055-15.758 15.758s7.055 15.758 15.758 15.758c8.703 0 15.758-7.055 15.758-15.758s-7.055-15.758-15.758-15.758z"></path>
+        <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="0.7273" d="M14.232 11.585l-4.415 4.415 4.415 4.415"></path>
+        <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="0.7273" d="M22.181 15.999h-12.24"></path>
+    </symbol>
+    <symbol id="icon-arrow-right-slider" viewBox="0 0 32 32">
+        <path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="0.4848" d="M16 0.242c8.703 0 15.758 7.055 15.758 15.758s-7.055 15.758-15.758 15.758c-8.703 0-15.758-7.055-15.758-15.758s7.055-15.758 15.758-15.758z"></path>
+        <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="0.7273" d="M17.768 11.585l4.415 4.415-4.415 4.415"></path>
+        <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="0.7273" d="M9.819 15.999h12.24"></path>
+    </symbol>
+    <symbol id="icon-arrow-slider" viewBox="0 0 32 32">
+        <path fill="var(--color1, #97d28b)" d="M16 0c8.837 0 16 7.163 16 16s-7.163 16-16 16c-8.837 0-16-7.163-16-16s7.163-16 16-16z"></path>
+        <path fill="none" stroke="var(--color2, #173d33)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="0.8" d="M14.399 12.26h5.341v5.341"></path>
+        <path fill="none" stroke="var(--color2, #173d33)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="0.8" d="M12.261 19.739l7.405-7.405"></path>
+    </symbol>
 </svg>
