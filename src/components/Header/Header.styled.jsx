@@ -1,4 +1,3 @@
-/* eslint-disable react-refresh/only-export-components */
 import styled from "styled-components";
 
 export const HeaderWrapper = styled.div`
@@ -11,7 +10,10 @@ export const HeaderWrapper = styled.div`
   padding-top: 36px;
   padding-left: 20px;
   padding-right: 20px;
-  background-color: var(--background-color);
+  z-index: 10;
+  transition: background-color 0.3s ease;
+
+  background-color: ${({ backgroundColor }) => backgroundColor};
 
   @media screen and (min-width: 768px) {
     padding-left: 30px;

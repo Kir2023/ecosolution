@@ -18,7 +18,7 @@ const HomePage = () => {
         aboutSectionRef={aboutSectionRef}
         casesSectionRef={casesSectionRef}
       />
-      <Main ref={mainSectionRef} />
+      <Main ref={mainSectionRef} casesSectionRef={casesSectionRef} />
       <About ref={aboutSectionRef} />
       <Electricity />
       <Cases ref={casesSectionRef} />

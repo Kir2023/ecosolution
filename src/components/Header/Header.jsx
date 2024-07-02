@@ -1,14 +1,14 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
-  BurgerButton,
-  ButtonsWrapper,
-  GetInTouchButton,
   HeaderWrapper,
-  SVGArrow,
-  SVGBurger,
   SVGLogo,
+  ButtonsWrapper,
+  BurgerButton,
+  SVGBurger,
+  GetInTouchButton,
+  SVGArrow,
 } from "./Header.styled";
 import sprite from "../../assets/sprite.svg";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
@@ -16,6 +16,19 @@ import BurgerMenu from "../BurgerMenu/BurgerMenu";
 const Header = ({ mainSectionRef, aboutSectionRef, casesSectionRef }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("");
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  const handleScroll = () => {
+    const position = window.scrollY;
+    setScrollPosition(position);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -35,7 +48,11 @@ const Header = ({ mainSectionRef, aboutSectionRef, casesSectionRef }) => {
   };
 
   return (
-    <HeaderWrapper>
+    <HeaderWrapper
+      style={{
+        backgroundColor: scrollPosition > 0 ? "#EAEDF1" : "transparent",
+      }}
+    >
       <Link to="/" onClick={resetActiveLinkAndScrollTop}>
         <SVGLogo>
           <use href={`${sprite}#icon-logo`} />
