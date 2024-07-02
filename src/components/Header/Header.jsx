@@ -13,7 +13,12 @@ import {
 import sprite from "../../assets/sprite.svg";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
 
-const Header = ({ mainSectionRef, aboutSectionRef, casesSectionRef }) => {
+const Header = ({
+  mainSectionRef,
+  aboutSectionRef,
+  casesSectionRef,
+  faqSectionRef,
+}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("");
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -77,6 +82,7 @@ const Header = ({ mainSectionRef, aboutSectionRef, casesSectionRef }) => {
           mainSectionRef={mainSectionRef}
           aboutSectionRef={aboutSectionRef}
           casesSectionRef={casesSectionRef}
+          faqSectionRef={faqSectionRef}
           activeLink={activeLink}
           onLinkClick={handleLinkClick}
         />

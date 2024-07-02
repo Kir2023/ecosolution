@@ -94,4 +94,11 @@
         <path fill="none" stroke="var(--color2, #173d33)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="0.8" d="M14.399 12.26h5.341v5.341"></path>
         <path fill="none" stroke="var(--color2, #173d33)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="0.8" d="M12.261 19.739l7.405-7.405"></path>
     </symbol>
+    <symbol id="icon-minus" viewBox="0 0 32 32">
+        <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3" d="M8 16h16"></path>
+    </symbol>
+    <symbol id="icon-plus" viewBox="0 0 32 32">
+        <path fill="none" stroke="#97d28b" style="stroke: var(--color1, #97d28b)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3" d="M8 16h16"></path>
+        <path fill="none" stroke="#97d28b" style="stroke: var(--color1, #97d28b)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3" d="M16 24v-16"></path>
+    </symbol>
 </svg>
