@@ -21,8 +21,18 @@ import img from "../../assets/images/main-img.webp";
 
 const Main = forwardRef((props, ref) => {
   const scrollToCases = () => {
-    if (props.casesSectionRef.current) {
-      props.casesSectionRef.current.scrollIntoView({ behavior: "smooth" });
+    const target = props.casesSectionRef.current;
+    const headerOffset = 100;
+
+    if (target) {
+      const elementPosition =
+        target.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
     }
   };
 

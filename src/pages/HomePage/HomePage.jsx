@@ -6,6 +6,7 @@ import About from "../../components/About/About";
 import Electricity from "../../components/Electricity/Electricity";
 import Cases from "../../components/Cases/Cases";
 import FrequentlyAskedQuestions from "../../components/FrequentlyAskedQuestions/FrequentlyAskedQuestions";
+import ContactUs from "../../components/ContactUs/ContactUs";
 
 const HomePage = () => {
   const mainSectionRef = useRef(null);
@@ -21,11 +22,12 @@ const HomePage = () => {
         casesSectionRef={casesSectionRef}
         faqSectionRef={faqSectionRef}
       />
-      <Main ref={mainSectionRef} />
+      <Main ref={mainSectionRef} casesSectionRef={casesSectionRef} />
       <About ref={aboutSectionRef} />
       <Electricity />
       <Cases ref={casesSectionRef} />
       <FrequentlyAskedQuestions ref={faqSectionRef} />
+      <ContactUs />
     </Container>
   );
 };

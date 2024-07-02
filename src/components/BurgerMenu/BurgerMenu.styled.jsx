@@ -94,6 +94,7 @@ export const NavigationList = styled.ul``;
 export const NavigationListItem = styled.li``;
 
 export const NavigationLink = styled.a`
+  width: fit-content;
   color: rgba(255, 255, 255, 0.25);
   font-size: 24px;
   line-height: 29px;
