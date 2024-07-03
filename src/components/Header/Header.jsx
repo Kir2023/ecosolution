@@ -18,6 +18,7 @@ const Header = ({
   aboutSectionRef,
   casesSectionRef,
   faqSectionRef,
+  contactUsSectionRef,
 }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("");
@@ -52,6 +53,16 @@ const Header = ({
     window.scrollTo(0, 0);
   };
 
+  const scrollToContactUs = () => {
+    if (contactUsSectionRef && contactUsSectionRef.current) {
+      const offsetTop = contactUsSectionRef.current.offsetTop;
+      window.scrollTo({
+        top: offsetTop - 100,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <HeaderWrapper
       style={{
@@ -69,7 +80,8 @@ const Header = ({
             <use href={`${sprite}#icon-burger`} />
           </SVGBurger>
         </BurgerButton>
-        <GetInTouchButton>
+        <GetInTouchButton onClick={scrollToContactUs}>
+          {" "}
           Get in touch
           <SVGArrow>
             <use href={`${sprite}#icon-arrow-down`} />
@@ -83,6 +95,7 @@ const Header = ({
           aboutSectionRef={aboutSectionRef}
           casesSectionRef={casesSectionRef}
           faqSectionRef={faqSectionRef}
+          contactUsSectionRef={contactUsSectionRef}
           activeLink={activeLink}
           onLinkClick={handleLinkClick}
         />

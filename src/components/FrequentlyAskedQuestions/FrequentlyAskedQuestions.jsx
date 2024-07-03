@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable react/display-name */
 import { useState, forwardRef } from "react";
 import {
@@ -16,7 +17,7 @@ import {
 } from "./FrequentlyAskedQuestions.styled";
 import sprite from "../../assets/sprite.svg";
 
-const FrequentlyAskedQuestions = forwardRef((props, ref) => {
+const FrequentlyAskedQuestions = forwardRef(({ contactUsSectionRef }, ref) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const toggleQuestion = (index) => {
@@ -24,6 +25,16 @@ const FrequentlyAskedQuestions = forwardRef((props, ref) => {
       setActiveIndex(null);
     } else {
       setActiveIndex(index);
+    }
+  };
+
+  const handleContactClick = () => {
+    if (contactUsSectionRef && contactUsSectionRef.current) {
+      const top =
+        contactUsSectionRef.current.getBoundingClientRect().top +
+        window.scrollY -
+        100;
+      window.scrollTo({ top, behavior: "smooth" });
     }
   };
 
@@ -112,8 +123,8 @@ const FrequentlyAskedQuestions = forwardRef((props, ref) => {
         ))}
       </QuestionsWrapper>
       <FAQContactWrapper>
-        <FAQText>Didn&apos;t find the answer to your question? </FAQText>
-        <ContactButton>
+        <FAQText>Didn&apos;t find the answer to your question?</FAQText>
+        <ContactButton onClick={handleContactClick}>
           Contact Us
           <SVGArrow>
             <use href={`${sprite}#icon-arrow-down`} />

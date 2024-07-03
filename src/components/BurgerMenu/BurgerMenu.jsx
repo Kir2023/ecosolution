@@ -24,6 +24,7 @@ const BurgerMenu = ({
   aboutSectionRef,
   casesSectionRef,
   faqSectionRef,
+  contactUsSectionRef,
   activeLink,
   onLinkClick,
 }) => {
@@ -118,7 +119,9 @@ const BurgerMenu = ({
             </NavigationListItem>
             <NavigationListItem>
               <NavigationLink
-                onClick={() => scrollToSection(mainSectionRef, "Contact Us")}
+                onClick={() =>
+                  scrollToSection(contactUsSectionRef, "Contact Us")
+                }
                 $isactive={activeLink === "Contact Us"}
               >
                 Contact Us

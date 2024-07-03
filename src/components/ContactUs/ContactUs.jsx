@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name */
 import {
   ContactUsWrapper,
   ContactsHeader,
@@ -22,8 +23,9 @@ import sprite from "../../assets/sprite.svg";
 import { Formik } from "formik";
 import * as Yup from "yup";
 import { Notify } from "notiflix";
+import { forwardRef } from "react";
 
-const ContactUs = () => {
+const ContactUs = forwardRef((props, ref) => {
   const handleSubmit = (values, { resetForm }) => {
     Notify.success("Form submitted successfully");
     resetForm();
@@ -46,7 +48,7 @@ const ContactUs = () => {
   });
 
   return (
-    <ContactUsWrapper>
+    <ContactUsWrapper ref={ref}>
       <ContactsHeader>Contact us</ContactsHeader>
       <BigWrapper>
         <ContactsWrapper>
@@ -179,6 +181,6 @@ const ContactUs = () => {
       </BigWrapper>
     </ContactUsWrapper>
   );
-};
+});
 
 export default ContactUs;
