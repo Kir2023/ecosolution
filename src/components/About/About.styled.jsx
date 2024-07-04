@@ -50,6 +50,8 @@ export const VerticalLine = styled.div`
     display: none;
   }
 
+  position: absolute;
+  right: 50%;
   height: 110px;
   width: 1px;
   background-color: var(--main-color);
