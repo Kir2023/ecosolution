@@ -1,8 +1,33 @@
-# React + Vite
+# Лендінг енергетичної компанії
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+                                            КОРОТКИЙ ОПИС
 
-Currently, two official plugins are available:
+Лендінг складається з 9 секцій:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1.  Header
+2.  Burger-menu
+3.  Main
+4.  About (Values)
+5.  Electricity
+6.  Cases
+7.  FAQ
+8.  Contact Us
+9.  Foote
+
+                                      ВИКОРИСТАНІ ТЕХНОЛОГІЇ
+
+- HTML
+
+- CSS
+
+- JavaScript
+
+- React.js
+
+                                      ТЕХНІЧНЕ ЗАВДАННЯ
+
+https://docs.google.com/document/d/1ZMFkZ19gkjatcx5-tVVJz0Boi-bqXJsV/edit
+
+                                        МАКЕТ
+
+https://www.figma.com/design/pTbhAbEXjsofeQHmtIE2tK/Ecosolution?node-id=136-1944&t=UNhhB5SNv446PGfT-0

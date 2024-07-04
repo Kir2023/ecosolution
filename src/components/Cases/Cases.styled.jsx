@@ -61,6 +61,8 @@ export const VerticalLine = styled.div`
     display: none;
   }
 
+  position: absolute;
+  right: 50%;
   width: 1px;
   height: 65px;
   background: var(--main-color);
@@ -140,6 +142,11 @@ export const SliderWrapper = styled.div`
 
 export const Slide = styled.div`
   background: #eaedf1;
+
+  &:hover svg {
+    --color1: var(--main-text-color);
+    --color2: var(--main-color);
+  }
 `;
 
 export const SlideIMG = styled.img`
@@ -186,11 +193,6 @@ export const SVGSliderArrow = styled.svg`
   height: 60px;
   --color1: var(--main-color);
   --color2: var(--main-text-color);
-
-  &:hover {
-    --color1: var(--main-text-color);
-    --color2: var(--main-color);
-  }
 `;
 
 export const HorizontalLine = styled.div`
