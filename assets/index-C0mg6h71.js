@@ -807,6 +807,8 @@ Error generating stack: `+o.message+`
     display: none;
   }
 
+  position: absolute;
+  right: 50%;
   width: 1px;
   height: 65px;
   background: var(--main-color);
@@ -878,6 +880,11 @@ Error generating stack: `+o.message+`
   }
 `,Y2=z.div`
   background: #eaedf1;
+
+  &:hover svg {
+    --color1: var(--main-text-color);
+    --color2: var(--main-color);
+  }
 `,K2=z.img`
   width: 100%;
 `,q2=z.div`
@@ -916,11 +923,6 @@ Error generating stack: `+o.message+`
   height: 60px;
   --color1: var(--main-color);
   --color2: var(--main-text-color);
-
-  &:hover {
-    --color1: var(--main-text-color);
-    --color2: var(--main-color);
-  }
 `,e6=z.div`
   height: 1px;
   background: var(--main-color);
