@@ -559,6 +559,8 @@ Error generating stack: `+o.message+`
     display: none;
   }
 
+  position: absolute;
+  right: 50%;
   height: 110px;
   width: 1px;
   background-color: var(--main-color);
